@@ -1,8 +1,13 @@
 source ~/.bashrc
+export PATH=/usr/local/bin:$PATH
 
 # anyenv
 export PATH="$HOME/.anyenv/bin:$PATH"
 eval "$(anyenv init -)"
+
+# rbenv
+export PATH=$HOME/.rbenv/bin:$PATH
+eval "$(rbenv init -)"
 
 #add GOPATH
 GOPATH=$HOME/go
@@ -27,8 +32,10 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # added by Anaconda3 5.2.0 installer
-export PATH="/Users/izuru/anaconda3/bin:$PATH"
-export PATH=/usr/local/bin:$PATH
+# export PATH="/Users/izuru/anaconda3/bin:$PATH"
+
+# flutter
+export PATH=/Users/izuru/flutter/bin:$PATH
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/izuru/google-cloud-sdk/path.bash.inc' ]; then source '/Users/izuru/google-cloud-sdk/path.bash.inc'; fi

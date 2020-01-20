@@ -1,6 +1,8 @@
 set enc=utf-8
 set fencs=iso-2022-jp,euc-jp,sjis,cp932,utf-8
 
+set clipboard+=unnamed
+
 "swap files dir
 set directory=~/.vim/tmp
 "backup files dir
