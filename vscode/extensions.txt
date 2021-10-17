@@ -1,0 +1,14 @@
+auchenberg.vscode-browser-preview
+formulahendry.auto-close-tag
+formulahendry.auto-rename-tag
+formulahendry.code-runner
+golang.go
+ms-azuretools.vscode-docker
+MS-CEINTL.vscode-language-pack-ja
+ms-python.python
+ms-python.vscode-pylance
+ms-toolsai.jupyter
+ms-toolsai.jupyter-keymap
+ms-toolsai.jupyter-renderers
+ms-vscode-remote.remote-containers
+ms-vscode.cpptools
