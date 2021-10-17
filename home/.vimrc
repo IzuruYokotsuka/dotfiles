@@ -7,6 +7,8 @@ set clipboard+=unnamed
 set directory=~/.vim/tmp
 "backup files dir
 set backupdir=~/.vim/tmp
+"no swapfile"
+set noswapfile
 
 "show line numbers
 set number
@@ -76,29 +78,12 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 "migemo
 nnoremap m/ g/
 
-
 if &compatible
  set nocompatible
 endif
 " Add the dein installation directory into runtimepath
 set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 
-if dein#load_state('~/.cache/dein')
- call dein#begin('~/.cache/dein')
-
- if filereadable(expand('~/.vimrc.dein'))
-  source ~/.vimrc.dein
-endif
-
-" 設定終了
- call dein#end()
- call dein#save_state()
-endif
-
-" もし、未インストールものものがあったらインストール
-if dein#check_install()
-  call dein#install()
-endif
 
 filetype plugin indent on
 syntax enable
