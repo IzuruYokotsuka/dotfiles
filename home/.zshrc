@@ -23,23 +23,48 @@ fi
 
 setopt magic_equal_subst
 
+# PS1
 # bash PS1
 # export PS1="\u@\h:\[\e[0;32m\]\w\[\e[0m\]\n$ "
 # zsh PS1
 PROMPT="[$(uname -m)]%n@%m:%F{cyan}%~%f@ "
 RPROMPT=""
 
+# ---------- alias ----------
+# source
+alias sz="source ~/.zshrc"
+# ls
 alias ls='ls -FGh'
 alias la='ls -a'
 alias ll='ls -l'
 alias lla='ls -la'
+# git
 alias gst='git st'
+# vim
 alias vi='vim'
 alias vf='vim +VimFiler'
 alias vn='vim +NERDTreeToggle'
+alias vz='vim ~/.zshrc'
+# atcoder
+alias at='atcoder-tools'
+alias atg='(){at gen $1 --workspace ~/workspace/contest/atcoder}'
+alias att='at test'
 
 # ---------- peco ----------
 export HISTCONTROL=ignoredups
 export HISTIGNORE="history*:exit:ls:ll:cd:cd ~:vi:gst"
 export HISTSIZE=10000
 
+# ---------- hook ----------
+chpwd() {
+  if [[ $(pwd) != $HOME ]]; then;
+    ls
+  fi
+}
+
+# ---------- setopt ----------
+
+# cd無しでもディレクトリ移動
+setopt auto_cd
+# 同時に起動しているzshの間でhistoryを共有
+setopt share_history

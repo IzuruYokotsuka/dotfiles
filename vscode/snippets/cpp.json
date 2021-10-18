@@ -13,7 +13,7 @@
 	// 	"description": "Log output to console"
 	// }
 	"first": {
-		"prefix": "#in",
+		"prefix": "first",
 		"body": [
 			"#include <bits/stdc++.h>",
 			"using namespace std;",
@@ -22,5 +22,106 @@
 			"}"
 		],
 		"description": "first"
-	}
+	},
+	"out": {
+		"body": "cout << ${1:ans} << \"\\n\";",
+		"prefix": "out"
+	},
+	"out2": {
+		"body": [
+			"cout << ${1:ans} << ${2:ans} << \"\\n\";"
+		],
+		"description": "out2",
+		"prefix": "out2"
+	},
+	"in": {
+		"body": [
+			"int n;",
+			"cin >> n;"
+		],
+		"description": "in",
+		"prefix": "in"
+	},
+	"for": {
+		"body": [
+			"for(int i = 0; i < n; i++)",
+		],
+		"description": "for",
+		"prefix": "for"
+	},
+	"inputvec": {
+		"body": [
+			"vector<${1:int}> ${2:a}(${3:n});",
+			"for (int i = 0; i < $3; i++) cin >> $2[i];",
+			""
+		],
+		"description": "inputvec",
+		"prefix": "inputvec"
+	},
+	"max": {
+		"body": [
+			"${1:max_hoge} = max(${2:hoge_i}, $1);"
+		],
+		"description": "max",
+		"prefix": "max"
+	},
+	"min": {
+		"body": [
+			"${1:min_hoge} = min(${2:hoge_i}, $1);"
+		],
+		"description": "min",
+		"prefix": "min"
+	},
+	"yesno": {
+		"body": [
+			"cout << (${1:ans} ? ${2|\"Yes\" : \"No\",\"YES\" : \"NO\",\"yes\" : \"no\"|}) << \"\\n\";"
+		],
+		"description": "yesno",
+		"prefix": "yesno"
+	},	
+	// "log2n": {
+	// 	"body": [
+	// 		"constexpr long long log2n(long long n) {",
+	// 		"    long long log_n = 1;",
+	// 		"    while ((1LL << log_n) < n) log_n++;",
+	// 		"    return log_n;",
+	// 		"}",
+	// 		""
+	// 	],
+	// 	"description": "log2n",
+	// 	"prefix": "log2n"
+	// },
+	"meguru_binary_search": {
+		"body": [
+			"    // めぐる式二分探索",
+			"    // (ng, ok] or [ok, ng)",
+			"    // 条件を満たす最小(最大)のindex okと",
+			"    // 条件を満たさない最大(最小)のindex ngを探索する",
+			"    int ok = ${1:n};  // 条件を満たすindex",
+			"    int ng = ${2:-1};   // 条件を満たさないindex",
+			"    while (abs(ok - ng) > 1) {",
+			"        int mid = (ok + ng) / 2;",
+			"        if (${3:isSatisfy}(mid))",
+			"            ok = mid;",
+			"        else",
+			"            ng = mid;",
+			"    }",
+			""
+		],
+		"description": "meguru_binary_search",
+		"prefix": "meguru_binary_search"
+	},
+	// 累積話
+	"cumulative_sum": {
+		"body": [
+			"vector<int> cs${1:a}(${2:n} + 1);",
+			"cs${1:a}[0] = 0;",
+			"for (int i = 0; i < ${2:n}; i++)",
+			"    cs${1:a}[i + 1] = cs${1:a}[i] + ${1:a}[i];",
+			"$0"
+		],
+		"description": "cumulative_sum",
+		"prefix": "cumulative_sum"
+	},
+	
 }
