@@ -2,5 +2,8 @@
     "code-runner.runInTerminal": true,
     "workbench.startupEditor": "none",
     "C_Cpp.autocompleteAddParentheses": true,
-    "workbench.iconTheme": "material-icon-theme"
+    "C_Cpp.clang_format_style": "{BasedOnStyle: Google, IndentWidth: 4}",
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.formatOnType": true,
+    "editor.formatOnSave": true,
 }

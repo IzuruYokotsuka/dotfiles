@@ -50,6 +50,16 @@ alias at='atcoder-tools'
 alias atg='(){at gen $1 --workspace ~/workspace/contest/atcoder}'
 alias att='at test'
 
+# java
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home
+export PATH="${JAVA_HOME}/bin:${PATH}"
+
+# android sdk
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
 # ---------- peco ----------
 export HISTCONTROL=ignoredups
 export HISTIGNORE="history*:exit:ls:ll:cd:cd ~:vi:gst"

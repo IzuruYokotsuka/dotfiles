@@ -24,15 +24,22 @@
 		"description": "first"
 	},
 	"out": {
-		"body": "cout << ${1:ans} << \"\\n\";",
+		"body": "cout << ${1:ans} << endl;",
 		"prefix": "out"
 	},
 	"out2": {
 		"body": [
-			"cout << ${1:ans} << ${2:ans} << \"\\n\";"
+			"cout << ${1:ans} << ${2:ans} << endl;"
 		],
 		"description": "out2",
 		"prefix": "out2"
+	},
+	"outfew": {
+		"body": [
+			"cout << fixed << setprecision(15) << y << endl;"
+		],
+		"description": "outfew",
+		"prefix": "outfew"
 	},
 	"in": {
 		"body": [
@@ -44,7 +51,7 @@
 	},
 	"for": {
 		"body": [
-			"for(int i = 0; i < n; i++)",
+			"for(int i = 0; i < n; i++){}",
 		],
 		"description": "for",
 		"prefix": "for"
@@ -78,7 +85,7 @@
 		],
 		"description": "yesno",
 		"prefix": "yesno"
-	},	
+	},
 	// "log2n": {
 	// 	"body": [
 	// 		"constexpr long long log2n(long long n) {",
@@ -123,5 +130,11 @@
 		"description": "cumulative_sum",
 		"prefix": "cumulative_sum"
 	},
-	
+	"gcd": {
+		"body": [
+			"int gcd(int a, int b){if(a%b == 0){return b;}else{return gcd(b, a%b);}}"
+		],
+		"description": "gcd",
+		"prefix": "gcd"
+	},
 }
