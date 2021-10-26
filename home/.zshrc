@@ -47,7 +47,7 @@ alias vn='vim +NERDTreeToggle'
 alias vz='vim ~/.zshrc'
 # atcoder
 alias at='atcoder-tools'
-alias atg='(){at gen $1 --workspace ~/workspace/contest/atcoder}'
+alias atg='(){at gen $1 --workspace ~/workspace/contest/atcoder/atcoder-tools}'
 alias att='at test'
 
 # java
