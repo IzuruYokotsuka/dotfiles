@@ -48,6 +48,9 @@ RPROMPT=""
 # OK
 
 # ---------- alias ----------
+# neovim/vim
+alias vim='nvim'
+
 # source
 alias sz="source ~/.zshrc"
 # ls
