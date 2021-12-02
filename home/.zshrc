@@ -52,21 +52,23 @@ RPROMPT=""
 # ---------- alias ----------
 # neovim/vim
 alias vim='nvim'
+alias vi='nvim'
+alias vf='nvim +VimFiler'
+alias vn='nvim +NERDTreeToggle'
+alias vz='nvim ~/.zshrc'
 
 # source
 alias sz="source ~/.zshrc"
+
 # ls
 alias ls='ls -FGh'
 alias la='ls -a'
 alias ll='ls -l'
 alias lla='ls -la'
+
 # git
 alias gst='git st'
-# vim
-alias vi='vim'
-alias vf='vim +VimFiler'
-alias vn='vim +NERDTreeToggle'
-alias vz='vim ~/.zshrc'
+
 # atcoder
 alias at='atcoder-tools'
 alias atg='(){at gen $1 --workspace ~/workspace/contest/atcoder/atcoder-tools}'
