@@ -32,7 +32,27 @@ setopt magic_equal_subst
 PROMPT="[$(uname -m)]%n@%m:%F{cyan}%~%f@ "
 RPROMPT=""
 
+# ---------- c -------------
+# brew install gcc
+
+# arm64
+# ln -s /opt/homebrew/bin/g++-11 /opt/homebrew/bin/g++
+# ↓
+# $ which g++
+# /opt/homebrew/bin/g++
+# OK
+
+# x86_64
+# ln -s /usr/local/bin/g++-11 /usr/local/bin/g++
+# ↓
+# $ which g++
+# /usr/local/bin/g++
+# OK
+
 # ---------- alias ----------
+# neovim/vim
+alias vim='nvim'
+
 # source
 alias sz="source ~/.zshrc"
 # ls
